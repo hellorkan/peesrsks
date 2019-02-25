@@ -21,9 +21,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content.startsWith('$js')) {
-      var rank = "``JavaScript``";
+      var rank = "``☆ • JavaScript``";
   if(!message.channel.guild) return message.reply('هاذا الكوماند فقط للسيرفرات');
-  let staff = message.guild.member(message.author).roles.find('name' , 'JavaScript');
+  let staff = message.guild.member(message.author).roles.find('name' , '☆ • JavaScript');
   if(!staff) return message.reply(`You not have ${rank} Rank`)
       let jscodes = message.guild.channels.find(`name`, "📘-discordjs");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
@@ -122,9 +122,9 @@ ${boi2}
 
 client.on('message', message => {
     if (message.content.startsWith('$java')) {
-      var rank = "``Java``";
+      var rank = "``☆ • Java``";
   if(!message.channel.guild) return message.reply('هاذا الكوماند فقط للسيرفرات');
-  let staff = message.guild.member(message.author).roles.find('name' , 'Java');
+  let staff = message.guild.member(message.author).roles.find('name' , '☆ • Java');
   if(!staff) return message.reply(`You not have ${rank} Rank`)
       let jscodes = message.guild.channels.find(`name`, "📘-discordjava");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
@@ -222,9 +222,9 @@ ${boi2}
 
 client.on('message', message => {
     if (message.content.startsWith('$py')) {
-      var rank = "``Python``";
+      var rank = "``☆ • Python``";
   if(!message.channel.guild) return message.reply('هاذا الكوماند فقط للسيرفرات');
-  let staff = message.guild.member(message.author).roles.find('name' , 'Python');
+  let staff = message.guild.member(message.author).roles.find('name' , '☆ • Python');
   if(!staff) return message.reply(`You not have ${rank} Rank`)
       let jscodes = message.guild.channels.find(`name`, "📘-discordpy");
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
