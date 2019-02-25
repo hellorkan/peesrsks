@@ -319,7 +319,102 @@ ${boi2}
 });
 
 
-
+client.on('message', message => {
+    if (message.content.startsWith('$sumbit')) {
+      var rank = "``☆ • Perk Student``";
+  if(!message.channel.guild) return message.reply('هاذا الكوماند فقط للسيرفرات');
+  let staff = message.guild.member(message.author).roles.find('name' , '☆ • Perk Student');
+  if(!staff) return message.reply(`You not have ${rank} Rank`)
+      let jscodes = message.guild.channels.find(`name`, "submissions");
+    if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر التقديمات ");
+      let filter = m => m.author.id === message.author.id;
+      let thisMessage;
+      let thisFalse;
+      message.channel.send(':pencil: **| اكتب أسمك الآن ... :pencil2: **').then(message => {
+  
+      message.channel.awaitMessages(filter, {
+        max: 1,
+        time: 90000,
+        errors: ['time']
+      })
+            .then(collected => {
+              collected.first().delete();
+              thisMessage = collected.first().content;
+              let boi4;
+              message.edit(':man_in_tuxedo: **| اكتب عمرك... :pencil2: **').then(message => {
+  
+                message.channel.awaitMessages(filter, {
+                  max: 1,
+                  time: 90000,
+                  errors: ['time']
+                })
+      .then(collected => {
+        collected.first().delete();
+        boi4 = collected.first().content;
+        let boi;
+        message.edit(':scroll: **| اكتب ما اللغة التي تعرفها... :pencil2: **').then(message => {
+  
+            message.channel.awaitMessages(filter, {
+              max: 1,
+              time: 90000,
+              errors: ['time']
+            })
+            .then(collected => {
+              collected.first().delete();
+              boi = collected.first().content;
+              let boi2;
+              message.edit(':man_in_tuxedo: **| و أخيراً اكتب من متى و انت تتعلم هذه اللغة... :pencil2: **').then(message => {
+  
+                message.channel.awaitMessages(filter, {
+                  max: 1,
+                  time: 90000,
+                  errors: ['time']
+                })
+                .then(collected => {
+                  collected.first().delete();
+                boi2 = collected.first().content;
+        message.edit(':shield: **| [ هل انت متأكد من التقديم؟ [ نعم ] او [ لا**');
+   message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
+          max: 1,
+          time: 90000,
+          errors: ['time']
+        })
+        .then(collected => {
+          if(collected.first().content === 'لا') {
+            message.delete();
+            message.delete();
+            thisFalse = false;
+          }
+          if(collected.first().content === 'نعم') {
+            if(thisFalse === false) return;
+            message.edit(':dove: **| Done :white_check_mark:, سيصلك الرد قريباً من الإدارة**');
+            collected.first().delete();
+            jscodes.send(`@everyone | @here
+ــــــــــــــــــــ
+**اسم المقدم** :      
+${thisMessage}
+ــــــــــــــــــــ
+**عمر المقدم**: 
+${boi4}
+ــــــــــــــــــــ
+**اللغة التي يعرفها المقدم**: 
+${boi}
+ــــــــــــــــــــ
+**مدة تعلمه للغة التي يعرفها**: 
+${boi2}
+ــــــــــــــــــــ
+`); 
+}})
+})
+})
+})
+})
+})
+})
+})
+});
+};
+});
 
 
 
@@ -330,7 +425,13 @@ client.on("message", message => {
      // .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
-» Commands Menu :
+» Public Commands Menu :
+
+» $sumbit : للتقديم على رتبة مبرمج
+
+ـــــــــــــــــــــــــــــــ
+
+» Support Commands Menu :
 
 » $js : بنشر اكواد جافا سكربت
 
