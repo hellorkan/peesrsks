@@ -5,7 +5,7 @@ const DiscordRvs = ["460606140666085378"];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
- // client.user.setStatus('dnd')
+ client.user.setStatus('dnd')
  // client.user.setGame(`with sexy yaman.`)
   client.user.setActivity("our Codes",{type: 'WATCHING'});
   console.log('')
