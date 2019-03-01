@@ -477,4 +477,60 @@ message.channel.sendEmbed(embed)
 });
 
 
+
+
+ client.on('message', message => {
+    if (message.content === "$js" ) {
+
+      let jscodes = message.guild.channels.find(`name`, "reports");
+
+      jscodes.send(` ` + message.author + ` will send code: **JavaScript**`); 
+
+ // message.channel.sendMessage("Pong!");
+   }
+  });
+
+  client.on('message', message => {
+    if (message.content === "$py" ) {
+
+      let jscodes = message.guild.channels.find(`name`, "reports");
+
+      jscodes.send(` ` + message.author + ` will send code: **Python**`); 
+
+ // message.channel.sendMessage("Pong!");
+   }
+  });
+
+  client.on('message', message => {
+    if (message.content === "$java" ) {
+
+      let jscodes = message.guild.channels.find(`name`, "reports");
+
+      jscodes.send(` ` + message.author + ` will send code: **Java**`); 
+
+ // message.channel.sendMessage("Pong!");
+   }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
