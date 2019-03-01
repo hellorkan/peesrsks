@@ -514,9 +514,11 @@ message.channel.sendEmbed(embed)
 
 
 
-
-
-
+client.on('message', message => {
+  if (message.content === "$ch" ) {
+message.channel.sendMessage("**📩 | check your DM**");
+ }
+});
 
 
 
