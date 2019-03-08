@@ -7,7 +7,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
  client.user.setStatus('dnd')
  // client.user.setGame(`with sexy yaman.`)
-  client.user.setActivity("our Codes",{type: 'WATCHING'});
+ // client.user.setActivity("our Codes",{type: 'WATCHING'});
   console.log('')
   console.log('')
   console.log('╔[════════════]╗')
@@ -515,13 +515,6 @@ message.channel.sendEmbed(embed)
    }
   });
 
-
-
-client.on('message', message => {
-  if (message.content === "$ch" ) {
-message.channel.sendMessage("**📩 | check your DM**");
- }
-});
 
 
 
