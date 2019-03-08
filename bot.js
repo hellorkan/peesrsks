@@ -454,7 +454,6 @@ ${message.author}`);//Fras#2729
 
  client.on('message', message => {
     if (message.content === "$js" ) {
-
       let jscodes = message.guild.channels.find(`name`, "reports");
 
       jscodes.send(` ` + message.author + ` will send code: **JavaScript**`); 
