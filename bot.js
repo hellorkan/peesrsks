@@ -447,37 +447,7 @@ ${message.author}`);//Fras#2729
 
 
 
-client.on("message", message => {
- if (message.content === "<@548879927492214809>") {
-  const embed = new Discord.RichEmbed()
-      .setColor("#970101")
-     // .setThumbnail(message.author.avatarURL)
-      .setDescription(`
- **
-» Public Commands Menu :
 
-» $sumbit : للتقديم على رتبة مبرمج
-
-ـــــــــــــــــــــــــــــــ
-
-» Support Commands Menu :
-
-» $js : بنشر اكواد جافا سكربت
-
-
-» $java : بنشر اكواد جافا
-
-
-» $py : لنشر اكواد بايثون
-
-**
-`)
-
-
-message.channel.sendEmbed(embed)
-
-}
-});
 
 
 
